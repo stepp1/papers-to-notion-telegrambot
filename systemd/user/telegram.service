@@ -1,0 +1,14 @@
+[Unit]
+Description=Arvix-Telegram-to-Notion-Bot
+After=network-online.target
+Wants=network-online.target
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Restart=always
+# Example: 
+# ExecStart=$HOME/.miniconda3/envs/telegram/bin/python $HOME/code/code-git/arvix-to-notion-telegrambot/telegram_bot.py
+
+ExecStart=/path/to/env/python /path/to/arvix-to-notion-telegrambot/telegram_bot.py
